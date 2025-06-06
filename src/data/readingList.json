@@ -1,0 +1,86 @@
+[
+  {
+    "day": 1,
+    "poem": { "title": "The Road Not Taken", "url": "https://www.poetryfoundation.org/poems/44272" },
+    "story": { "title": "The Gift of the Magi", "url": "https://www.gutenberg.org/ebooks/7256" },
+    "essay": { "title": "Self-Reliance", "url": "https://www.gutenberg.org/ebooks/16643" }
+  },
+  {
+    "day": 2,
+    "poem": { "title": "Ozymandias", "url": "https://www.poetryfoundation.org/poems/46565" },
+    "story": { "title": "The Lottery", "url": "https://www.newyorker.com/magazine/1948/06/26/the-lottery" },
+    "essay": { "title": "Politics and the English Language", "url": "https://www.orwell.ru/library/essays/politics/english/e_polit/" }
+  },
+  {
+    "day": 3,
+    "poem": { "title": "Invictus", "url": "https://www.poetryfoundation.org/poems/51642" },
+    "story": { "title": "The Yellow Wallpaper", "url": "https://www.gutenberg.org/ebooks/1952" },
+    "essay": { "title": "A Modest Proposal", "url": "https://www.gutenberg.org/ebooks/1080" }
+  },
+  {
+    "day": 4,
+    "poem": { "title": "If—", "url": "https://www.poetryfoundation.org/poems/46473" },
+    "story": { "title": "The Monkey's Paw", "url": "https://www.gutenberg.org/ebooks/12122" },
+    "essay": { "title": "The Soul of Man under Socialism", "url": "https://www.gutenberg.org/ebooks/1017" }
+  },
+  {
+    "day": 5,
+    "poem": { "title": "Annabel Lee", "url": "https://www.poetryfoundation.org/poems/44885" },
+    "story": { "title": "The Tell-Tale Heart", "url": "https://www.gutenberg.org/ebooks/2148" },
+    "essay": { "title": "On Liberty", "url": "https://www.gutenberg.org/ebooks/34901" }
+  },
+  {
+    "day": 6,
+    "poem": { "title": "Do Not Go Gentle into That Good Night", "url": "https://www.poetryfoundation.org/poems/46480" },
+    "story": { "title": "A Sound of Thunder", "url": "https://www.baen.com/Chapters/9781625794317/9781625794317___2.htm" },
+    "essay": { "title": "Shooting an Elephant", "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/shooting-an-elephant/" }
+  },
+  {
+    "day": 7,
+    "poem": { "title": "Still I Rise", "url": "https://www.poetryfoundation.org/poems/48989" },
+    "story": { "title": "Harrison Bergeron", "url": "https://www.gutenberg.org/ebooks/7273" },
+    "essay": { "title": "Civil Disobedience", "url": "https://www.gutenberg.org/ebooks/71" }
+  },
+  {
+    "day": 8,
+    "poem": { "title": "Hope is the Thing with Feathers", "url": "https://www.poetryfoundation.org/poems/42889" },
+    "story": { "title": "The Necklace", "url": "https://www.gutenberg.org/ebooks/3090" },
+    "essay": { "title": "The Myth of Sisyphus", "url": "https://www.blackwellpublishing.com/content/BPL_Images/Content_store/Sample_chapter/0631186409/001.pdf" }
+  },
+  {
+    "day": 9,
+    "poem": { "title": "Howl", "url": "https://www.poetryfoundation.org/poems/49303" },
+    "story": { "title": "The Cask of Amontillado", "url": "https://www.gutenberg.org/ebooks/1063" },
+    "essay": { "title": "Why I Write", "url": "https://orwell.ru/library/essays/wiw/english/e_wiw" }
+  },
+  {
+    "day": 10,
+    "poem": { "title": "The Love Song of J. Alfred Prufrock", "url": "https://www.poetryfoundation.org/poems/44212" },
+    "story": { "title": "An Occurrence at Owl Creek Bridge", "url": "https://www.gutenberg.org/ebooks/375" },
+    "essay": { "title": "Notes of a Native Son", "url": "https://rauterberg.employee.id.tue.nl/lecturenotes/critical-theory/baldwin_notes-of-a-native-son.pdf" }
+  },
+  {
+    "day": 11,
+    "poem": { "title": "The Raven", "url": "https://www.poetryfoundation.org/poems/48860" },
+    "story": { "title": "Bartleby, the Scrivener", "url": "https://www.gutenberg.org/ebooks/11231" },
+    "essay": { "title": "The Death of the Moth", "url": "https://www.phillipsedison.com/wp-content/uploads/2020/05/The-Death-of-the-Moth-by-Virginia-Woolf.pdf" }
+  },
+  {
+    "day": 12,
+    "poem": { "title": "Phenomenal Woman", "url": "https://www.poetryfoundation.org/poems/48985" },
+    "story": { "title": "A White Heron", "url": "https://www.gutenberg.org/ebooks/29511" },
+    "essay": { "title": "The Crack-Up", "url": "https://www.esquire.com/news-politics/a4310/the-crack-up/" }
+  },
+  {
+    "day": 13,
+    "poem": { "title": "Because I Could Not Stop for Death", "url": "https://www.poetryfoundation.org/poems/47652" },
+    "story": { "title": "To Build a Fire", "url": "https://www.gutenberg.org/ebooks/23428" },
+    "essay": { "title": "Meditations", "url": "https://classics.mit.edu/Antoninus/meditations.html" }
+  },
+  {
+    "day": 14,
+    "poem": { "title": "Let America Be America Again", "url": "https://www.poetryfoundation.org/poems/147907" },
+    "story": { "title": "Araby", "url": "https://www.gutenberg.org/ebooks/2814" },
+    "essay": { "title": "The Singer Solution to World Poverty", "url": "https://www.nytimes.com/library/magazine/home/19990905mag-poverty-singer.html" }
+  }
+]
