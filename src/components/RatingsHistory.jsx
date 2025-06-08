@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import readingList from '../data/readingList.json';
 
 const RatingsHistory = ({ ratings }) => {
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+
   const rows = [];
 
   for (const [key, value] of Object.entries(ratings)) {
@@ -17,16 +19,25 @@ const RatingsHistory = ({ ratings }) => {
 
   rows.sort((a, b) => a.day - b.day);
 
+  const filteredRows = showFavoritesOnly
+    ? rows.filter(entry => entry.rating === 5)
+    : rows;
+
   return (
     <div style={{ marginTop: '2rem' }}>
       <h2>📜 Ratings History</h2>
-      {rows.length === 0 ? (
-        <p>No ratings yet!</p>
+      <button onClick={() => setShowFavoritesOnly(prev => !prev)}>
+        {showFavoritesOnly ? "Show All Ratings" : "Show Only Favorites ⭐️"}
+      </button>
+
+      {filteredRows.length === 0 ? (
+        <p>{showFavoritesOnly ? "No 5-star favorites yet!" : "No ratings yet!"}</p>
       ) : (
         <ul>
-          {rows.map((entry, i) => (
-            <li key={i}>
+          {filteredRows.map((entry, i) => (
+            <li key={i} style={entry.rating === 5 ? { fontWeight: 'bold', color: '#f59e0b' } : {}}>
               <strong>Day {entry.day} - {entry.type}:</strong> {entry.title} → {entry.rating}⭐
+              {entry.rating === 5 && ' 🌟'}
             </li>
           ))}
         </ul>
