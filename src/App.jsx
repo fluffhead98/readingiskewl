@@ -68,7 +68,7 @@ function App() {
       </div>
 
       {/* Spotify Embed - Bottom Left */}
-      <div style={{ position: 'fixed', bottom: '1rem', left: '1rem', zIndex: 1000 }}>
+      <div style={{ position: 'fixed', bottom: '1rem', right: '1rem', zIndex: 1000 }}>
         <iframe
           title="Classical Essentials"
           style={{ borderRadius: '12px' }}
