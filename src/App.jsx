@@ -1,110 +1,86 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import readingList from './data/readingList.json';
 import StarRating from './components/StarRating';
 import RatingsHistory from './components/RatingsHistory';
 
 function App() {
-  const [day, setDay] = useState(() => {
-    const savedDay = localStorage.getItem('currentDay');
-    return savedDay ? parseInt(savedDay) : 1;
-  });
-
-  const [streak, setStreak] = useState(() => {
-    return parseInt(localStorage.getItem('streak') || '0');
-  });
-
-  const [lastReadDate, setLastReadDate] = useState(() => {
-    return localStorage.getItem('lastReadDate') || null;
-  });
-
+  const [dayIndex, setDayIndex] = useState(0);
   const [ratings, setRatings] = useState(() => {
-    const stored = localStorage.getItem('ratings');
-    return stored ? JSON.parse(stored) : {};
+    const saved = localStorage.getItem('ratings');
+    return saved ? JSON.parse(saved) : {};
+  });
+  const [streak, setStreak] = useState(() => {
+    const saved = localStorage.getItem('streak');
+    return saved ? parseInt(saved) : 0;
   });
 
-  const today = readingList.find(item => item.day === day);
+  const currentDay = readingList[dayIndex];
 
   useEffect(() => {
-    localStorage.setItem('currentDay', day);
-    localStorage.setItem('streak', streak);
     localStorage.setItem('ratings', JSON.stringify(ratings));
-    if (lastReadDate) localStorage.setItem('lastReadDate', lastReadDate);
-  }, [day, streak, ratings, lastReadDate]);
+  }, [ratings]);
 
-  const getTodayDate = () => new Date().toISOString().split('T')[0];
+  useEffect(() => {
+    localStorage.setItem('streak', streak);
+  }, [streak]);
 
-  const handleNextDay = () => {
-    const todayDate = getTodayDate();
-    if (day < readingList.length) setDay(day + 1);
+  const handleRate = (type, value) => {
+    const key = `${type}-${currentDay.day}`;
+    setRatings(prev => ({ ...prev, [key]: value }));
+  };
 
-    if (!lastReadDate) {
-      setStreak(1);
-    } else if (lastReadDate !== todayDate) {
-      const last = new Date(lastReadDate);
-      const now = new Date(todayDate);
-      const diff = Math.floor((now - last) / (1000 * 60 * 60 * 24));
-      setStreak(diff === 1 ? streak + 1 : 1);
+  const nextDay = () => {
+    if (dayIndex + 1 < readingList.length) {
+      setDayIndex(dayIndex + 1);
+      setStreak(prev => prev + 1);
     }
-
-    setLastReadDate(todayDate);
   };
-
-  const handlePreviousDay = () => {
-    if (day > 1) setDay(day - 1);
-  };
-
-  const handleRatingChange = (type, value) => {
-    setRatings(prev => ({
-      ...prev,
-      [`${type}-${day}`]: value
-    }));
-  };
-
-  const renderStarRating = (type) => (
-    <StarRating
-      rating={ratings[`${type}-${day}`] || 0}
-      onRate={(value) => handleRatingChange(type, value)}
-    />
-  );
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>readingiskewl 📚😎</h1>
-      <p>🔥 Streak: {streak} day{streak === 1 ? '' : 's'}</p>
+    <>
+      <div style={{ padding: "2rem" }}>
+        <h1>📚 readingiskewl</h1>
+        <h2>Day {currentDay.day}</h2>
 
-      {today ? (
-        <>
-          <h2>Day {today.day}</h2>
+        <p>
+          <strong>Poem:</strong> <a href={currentDay.poem.url} target="_blank" rel="noopener noreferrer">{currentDay.poem.title}</a>
+          <br />
+          <StarRating rating={ratings[`poem-${currentDay.day}`] || 0} onRate={(value) => handleRate('poem', value)} />
+        </p>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <strong>Poem:</strong>{' '}
-            <a href={today.poem.url} target="_blank" rel="noreferrer">{today.poem.title}</a>
-            <div>{renderStarRating("poem")}</div>
-          </div>
+        <p>
+          <strong>Story:</strong> <a href={currentDay.story.url} target="_blank" rel="noopener noreferrer">{currentDay.story.title}</a>
+          <br />
+          <StarRating rating={ratings[`story-${currentDay.day}`] || 0} onRate={(value) => handleRate('story', value)} />
+        </p>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <strong>Story:</strong>{' '}
-            <a href={today.story.url} target="_blank" rel="noreferrer">{today.story.title}</a>
-            <div>{renderStarRating("story")}</div>
-          </div>
+        <p>
+          <strong>Essay:</strong> <a href={currentDay.essay.url} target="_blank" rel="noopener noreferrer">{currentDay.essay.title}</a>
+          <br />
+          <StarRating rating={ratings[`essay-${currentDay.day}`] || 0} onRate={(value) => handleRate('essay', value)} />
+        </p>
 
-          <div style={{ marginBottom: '1.5rem' }}>
-            <strong>Essay:</strong>{' '}
-            <a href={today.essay.url} target="_blank" rel="noreferrer">{today.essay.title}</a>
-            <div>{renderStarRating("essay")}</div>
-          </div>
+        <button onClick={nextDay}>Next Day ➡️</button>
 
-          <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>
-            <button onClick={handlePreviousDay} disabled={day === 1}>← Previous</button>
-            <button onClick={handleNextDay} disabled={day === readingList.length}>Next →</button>
-          </div>
+        <p style={{ marginTop: '1rem' }}>🔥 Daily Streak: {streak} days</p>
 
-          <RatingsHistory ratings={ratings} />
-        </>
-      ) : (
-        <p>No reading available for Day {day}.</p>
-      )}
-    </div>
+        <RatingsHistory ratings={ratings} setRatings={setRatings} />
+      </div>
+
+      {/* Spotify Embed - Bottom Left */}
+      <div style={{ position: 'fixed', bottom: '1rem', left: '1rem', zIndex: 1000 }}>
+        <iframe
+          title="Classical Essentials"
+          style={{ borderRadius: '12px' }}
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWEJlAGA9gs0?utm_source=generator"
+          width="280"
+          height="80"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </>
   );
 }
 
