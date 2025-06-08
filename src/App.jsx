@@ -36,6 +36,10 @@ function App() {
     }
   };
 
+  const totalItems = readingList.length * 3;
+  const completedItems = Object.keys(ratings).length;
+  const percentComplete = Math.round((completedItems / totalItems) * 100);
+
   return (
     <>
       <div style={{ padding: "2rem" }}>
@@ -62,12 +66,17 @@ function App() {
 
         <button onClick={nextDay}>Next Day ➡️</button>
 
-        <p style={{ marginTop: '1rem' }}>🔥 Daily Streak: {streak} days</p>
+        <div style={{ marginTop: '1rem' }}>
+          <p>✅ You've completed {percentComplete}% of your reading journey!</p>
+          <div style={{ background: '#eee', borderRadius: '10px', height: '20px', width: '100%', maxWidth: '400px', overflow: 'hidden' }}>
+            <div style={{ width: `${percentComplete}%`, background: '#4ade80', height: '100%' }}></div>
+          </div>
+        </div>
 
         <RatingsHistory ratings={ratings} setRatings={setRatings} />
       </div>
 
-      {/* Spotify Embed - Bottom Left */}
+      {/* Spotify Embed - Bottom Right */}
       <div style={{ position: 'fixed', bottom: '1rem', right: '1rem', zIndex: 1000 }}>
         <iframe
           title="Classical Essentials"
