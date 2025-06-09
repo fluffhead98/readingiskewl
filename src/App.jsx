@@ -5,9 +5,7 @@ import RatingsHistory from './components/RatingsHistory';
 
 const App = () => {
   const [day, setDay] = useState(1);
-  const [ratings, setRatings] = useState(() => {
-    return JSON.parse(localStorage.getItem('ratings')) || {};
-  });
+  const [ratings, setRatings] = useState(() => JSON.parse(localStorage.getItem('ratings')) || {});
 
   useEffect(() => {
     localStorage.setItem('ratings', JSON.stringify(ratings));
@@ -15,7 +13,7 @@ const App = () => {
 
   const handleRate = (type, value) => {
     const key = `${type}-${day}`;
-    setRatings({ ...ratings, [key]: value });
+    setRatings(prev => ({ ...prev, [key]: value }));
   };
 
   const current = readingList.find(r => r.day === day);
@@ -36,20 +34,18 @@ const App = () => {
       </p>
 
       <div style={{ marginTop: '1rem' }}>
-        {['poem', 'story', 'essay'].map((type) => (
+        {['poem', 'story', 'essay'].map(type => (
           <div key={type} style={{ marginBottom: '1.5rem' }}>
-            <p>
+            <p style={{ margin: 0 }}>
               <strong>{type.charAt(0).toUpperCase() + type.slice(1)}:</strong>{' '}
               <a href={current[type].url} target="_blank" rel="noopener noreferrer">
                 {current[type].title}
               </a>
             </p>
-            <div>
-              <StarRating
-                rating={ratings[`${type}-${day}`] || 0}
-                onRate={(value) => handleRate(type, value)}
-              />
-            </div>
+            <StarRating
+              rating={ratings[`${type}-${day}`] || 0}
+              onRate={value => handleRate(type, value)}
+            />
           </div>
         ))}
       </div>
@@ -79,12 +75,13 @@ const App = () => {
             height: '100%',
             width: `${percentComplete}%`,
             background: '#4ade80'
-          }}></div>
+          }} />
         </div>
       </div>
 
       <RatingsHistory ratings={ratings} setRatings={setRatings} />
 
+      {/* Spotify Embed - Bottom Right */}
       <div style={{
         position: 'fixed',
         bottom: '1rem',
@@ -94,7 +91,7 @@ const App = () => {
       }}>
         <iframe
           style={{ width: '100%', height: '80px', borderRadius: '12px' }}
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3PIPIT6lEg5"
+          src="https://open.spotify.com/embed/playlist/6dEdaN9tg6S5x4v698ARfb"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
