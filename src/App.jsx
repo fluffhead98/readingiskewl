@@ -1,105 +1,106 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import readingList from './data/readingList.json';
 import StarRating from './components/StarRating';
 import RatingsHistory from './components/RatingsHistory';
 
-function App() {
-  const [dayIndex, setDayIndex] = useState(0);
+const App = () => {
+  const [day, setDay] = useState(1);
   const [ratings, setRatings] = useState(() => {
-    const saved = localStorage.getItem('ratings');
-    return saved ? JSON.parse(saved) : {};
+    return JSON.parse(localStorage.getItem('ratings')) || {};
   });
-  const [streak, setStreak] = useState(() => {
-    const saved = localStorage.getItem('streak');
-    return saved ? parseInt(saved) : 0;
-  });
-
-  const currentDay = readingList[dayIndex];
 
   useEffect(() => {
     localStorage.setItem('ratings', JSON.stringify(ratings));
   }, [ratings]);
 
-  useEffect(() => {
-    localStorage.setItem('streak', streak);
-  }, [streak]);
-
   const handleRate = (type, value) => {
-    const key = `${type}-${currentDay.day}`;
-    setRatings(prev => ({ ...prev, [key]: value }));
+    const key = `${type}-${day}`;
+    setRatings({ ...ratings, [key]: value });
   };
 
-  const nextDay = () => {
-    if (dayIndex + 1 < readingList.length) {
-      setDayIndex(dayIndex + 1);
-      setStreak(prev => prev + 1);
-    }
-  };
-
-  const previousDay = () => {
-    if (dayIndex > 0) {
-      setDayIndex(dayIndex - 1);
-    }
-  };
-
-  const totalItems = readingList.length * 3;
-  const completedItems = Object.keys(ratings).length;
-  const percentComplete = Math.round((completedItems / totalItems) * 100);
+  const current = readingList.find(r => r.day === day);
+  const completedCount = Object.keys(ratings).length;
+  const totalReadings = readingList.length * 3;
+  const percentComplete = Math.round((completedCount / totalReadings) * 100);
 
   return (
-    <>
-      <div style={{ padding: "2rem" }}>
-        <h1>📚 readingiskewl</h1>
-        <h2>Day {currentDay.day}</h2>
+    <div style={{
+      maxWidth: '600px',
+      margin: '0 auto',
+      padding: '1rem',
+      fontFamily: 'system-ui, sans-serif'
+    }}>
+      <h1 style={{ fontSize: '1.5rem', textAlign: 'center' }}>📚 Reading Is Kewl</h1>
+      <p style={{ textAlign: 'center', fontSize: '0.95rem' }}>
+        Day {day} of {readingList.length}
+      </p>
 
-        <p>
-          <strong>Poem:</strong> <a href={currentDay.poem.url} target="_blank" rel="noopener noreferrer">{currentDay.poem.title}</a>
-          <br />
-          <StarRating rating={ratings[`poem-${currentDay.day}`] || 0} onRate={(value) => handleRate('poem', value)} />
-        </p>
-
-        <p>
-          <strong>Story:</strong> <a href={currentDay.story.url} target="_blank" rel="noopener noreferrer">{currentDay.story.title}</a>
-          <br />
-          <StarRating rating={ratings[`story-${currentDay.day}`] || 0} onRate={(value) => handleRate('story', value)} />
-        </p>
-
-        <p>
-          <strong>Essay:</strong> <a href={currentDay.essay.url} target="_blank" rel="noopener noreferrer">{currentDay.essay.title}</a>
-          <br />
-          <StarRating rating={ratings[`essay-${currentDay.day}`] || 0} onRate={(value) => handleRate('essay', value)} />
-        </p>
-
-        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-          <button onClick={previousDay}>⬅️ Previous Day</button>
-          <button onClick={nextDay}>Next Day ➡️</button>
-        </div>
-
-        <div style={{ marginTop: '1rem' }}>
-          <p>✅ You've completed {percentComplete}% of your reading journey!</p>
-          <div style={{ background: '#eee', borderRadius: '10px', height: '20px', width: '100%', maxWidth: '400px', overflow: 'hidden' }}>
-            <div style={{ width: `${percentComplete}%`, background: '#4ade80', height: '100%' }}></div>
+      <div style={{ marginTop: '1rem' }}>
+        {['poem', 'story', 'essay'].map((type) => (
+          <div key={type} style={{ marginBottom: '1.5rem' }}>
+            <p>
+              <strong>{type.charAt(0).toUpperCase() + type.slice(1)}:</strong>{' '}
+              <a href={current[type].url} target="_blank" rel="noopener noreferrer">
+                {current[type].title}
+              </a>
+            </p>
+            <div>
+              <StarRating
+                rating={ratings[`${type}-${day}`] || 0}
+                onRate={(value) => handleRate(type, value)}
+              />
+            </div>
           </div>
-        </div>
-
-        <RatingsHistory ratings={ratings} setRatings={setRatings} />
+        ))}
       </div>
 
-      {/* Spotify Embed - Bottom Right */}
-      <div style={{ position: 'fixed', bottom: '1rem', right: '1rem', zIndex: 1000 }}>
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '0.5rem',
+        justifyContent: 'center',
+        marginTop: '1rem'
+      }}>
+        <button disabled={day === 1} onClick={() => setDay(day - 1)}>⬅️ Previous Day</button>
+        <button disabled={day === readingList.length} onClick={() => setDay(day + 1)}>Next Day ➡️</button>
+      </div>
+
+      <div style={{ marginTop: '1.5rem' }}>
+        <p style={{ textAlign: 'center' }}>📈 {percentComplete}% complete</p>
+        <div style={{
+          background: '#eee',
+          borderRadius: '8px',
+          overflow: 'hidden',
+          height: '12px',
+          margin: '0 auto',
+          maxWidth: '100%'
+        }}>
+          <div style={{
+            height: '100%',
+            width: `${percentComplete}%`,
+            background: '#4ade80'
+          }}></div>
+        </div>
+      </div>
+
+      <RatingsHistory ratings={ratings} setRatings={setRatings} />
+
+      <div style={{
+        position: 'fixed',
+        bottom: '1rem',
+        right: '1rem',
+        maxWidth: '90%',
+        zIndex: 1000
+      }}>
         <iframe
-          title="Classical Essentials"
-          style={{ borderRadius: '12px' }}
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWEJlAGA9gs0?utm_source=generator"
-          width="280"
-          height="80"
-          frameBorder="0"
+          style={{ width: '100%', height: '80px', borderRadius: '12px' }}
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3PIPIT6lEg5"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
