@@ -6,10 +6,19 @@ import RatingsHistory from './components/RatingsHistory';
 const App = () => {
   const [day, setDay] = useState(1);
   const [ratings, setRatings] = useState(() => JSON.parse(localStorage.getItem('ratings')) || {});
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    if (saved !== null) return JSON.parse(saved);
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   useEffect(() => {
     localStorage.setItem('ratings', JSON.stringify(ratings));
   }, [ratings]);
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
 
   const handleRate = (type, value) => {
     const key = `${type}-${day}`;
@@ -21,14 +30,26 @@ const App = () => {
   const totalReadings = readingList.length * 3;
   const percentComplete = Math.round((completedCount / totalReadings) * 100);
 
+  const backgroundColor = darkMode ? '#111' : '#fff';
+  const textColor = darkMode ? '#eee' : '#000';
+
   return (
     <div style={{
       maxWidth: '600px',
       margin: '0 auto',
       padding: '1rem',
-      fontFamily: 'system-ui, sans-serif'
+      fontFamily: 'system-ui, sans-serif',
+      backgroundColor,
+      color: textColor,
+      minHeight: '100vh'
     }}>
-      <h1 style={{ fontSize: '1.5rem', textAlign: 'center' }}>📚 Reading Is Kewl</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1 style={{ fontSize: '1.5rem' }}>📚 Reading Is Kewl</h1>
+        <button onClick={() => setDarkMode(prev => !prev)}>
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
+      </div>
+
       <p style={{ textAlign: 'center', fontSize: '0.95rem' }}>
         Day {day} of {readingList.length}
       </p>
@@ -39,9 +60,14 @@ const App = () => {
             <p style={{ margin: 0 }}>
               <strong>{type.charAt(0).toUpperCase() + type.slice(1)}:</strong>{' '}
               <a
-                href={current[type].url}
+                href={
+                  type === 'poem'
+                    ? `https://www.poetryfoundation.org/search?query=${encodeURIComponent(current[type].title)}`
+                    : current[type].url
+                }
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ color: darkMode ? '#93c5fd' : '#1d4ed8' }}
               >
                 {current[type].title}
               </a>
@@ -68,7 +94,7 @@ const App = () => {
       <div style={{ marginTop: '1.5rem' }}>
         <p style={{ textAlign: 'center' }}>📈 {percentComplete}% complete</p>
         <div style={{
-          background: '#eee',
+          background: darkMode ? '#333' : '#eee',
           borderRadius: '8px',
           overflow: 'hidden',
           height: '12px',
@@ -78,7 +104,7 @@ const App = () => {
           <div style={{
             height: '100%',
             width: `${percentComplete}%`,
-            background: '#4ade80'
+            background: darkMode ? '#22c55e' : '#4ade80'
           }} />
         </div>
       </div>
