@@ -36,6 +36,12 @@ function App() {
     }
   };
 
+  const previousDay = () => {
+    if (dayIndex > 0) {
+      setDayIndex(dayIndex - 1);
+    }
+  };
+
   const totalItems = readingList.length * 3;
   const completedItems = Object.keys(ratings).length;
   const percentComplete = Math.round((completedItems / totalItems) * 100);
@@ -64,7 +70,10 @@ function App() {
           <StarRating rating={ratings[`essay-${currentDay.day}`] || 0} onRate={(value) => handleRate('essay', value)} />
         </p>
 
-        <button onClick={nextDay}>Next Day ➡️</button>
+        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
+          <button onClick={previousDay}>⬅️ Previous Day</button>
+          <button onClick={nextDay}>Next Day ➡️</button>
+        </div>
 
         <div style={{ marginTop: '1rem' }}>
           <p>✅ You've completed {percentComplete}% of your reading journey!</p>
