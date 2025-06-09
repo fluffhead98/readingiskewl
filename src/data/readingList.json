@@ -1,86 +1,452 @@
 [
   {
     "day": 1,
-    "poem": { "title": "The Road Not Taken", "url": "https://www.poetryfoundation.org/poems/44272" },
-    "story": { "title": "The Gift of the Magi", "url": "https://www.gutenberg.org/ebooks/7256" },
-    "essay": { "title": "Self-Reliance", "url": "https://www.gutenberg.org/ebooks/16643" }
+    "poem": {
+      "title": "The Road Not Taken",
+      "url": "https://www.poetryfoundation.org/search?query=The+Road+Not+Taken"
+    },
+    "story": {
+      "title": "The Gift of the Magi",
+      "url": "https://www.google.com/search?q=The+Gift+of+the+Magi+short+story"
+    },
+    "essay": {
+      "title": "Self-Reliance",
+      "url": "https://www.google.com/search?q=Self-Reliance+essay"
+    }
   },
   {
     "day": 2,
-    "poem": { "title": "Ozymandias", "url": "https://www.poetryfoundation.org/poems/46565" },
-    "story": { "title": "The Lottery", "url": "https://www.newyorker.com/magazine/1948/06/26/the-lottery" },
-    "essay": { "title": "Politics and the English Language", "url": "https://www.orwell.ru/library/essays/politics/english/e_polit/" }
+    "poem": {
+      "title": "Ozymandias",
+      "url": "https://www.poetryfoundation.org/search?query=Ozymandias"
+    },
+    "story": {
+      "title": "The Lottery",
+      "url": "https://www.google.com/search?q=The+Lottery+short+story"
+    },
+    "essay": {
+      "title": "Politics and the English Language",
+      "url": "https://www.google.com/search?q=Politics+and+the+English+Language+essay"
+    }
   },
   {
     "day": 3,
-    "poem": { "title": "Invictus", "url": "https://www.poetryfoundation.org/poems/51642" },
-    "story": { "title": "The Yellow Wallpaper", "url": "https://www.gutenberg.org/ebooks/1952" },
-    "essay": { "title": "A Modest Proposal", "url": "https://www.gutenberg.org/ebooks/1080" }
+    "poem": {
+      "title": "Still I Rise",
+      "url": "https://www.poetryfoundation.org/search?query=Still+I+Rise"
+    },
+    "story": {
+      "title": "A Hunger Artist",
+      "url": "https://www.google.com/search?q=A+Hunger+Artist+short+story"
+    },
+    "essay": {
+      "title": "Shooting an Elephant",
+      "url": "https://www.google.com/search?q=Shooting+an+Elephant+essay"
+    }
   },
   {
     "day": 4,
-    "poem": { "title": "If—", "url": "https://www.poetryfoundation.org/poems/46473" },
-    "story": { "title": "The Monkey's Paw", "url": "https://www.gutenberg.org/ebooks/12122" },
-    "essay": { "title": "The Soul of Man under Socialism", "url": "https://www.gutenberg.org/ebooks/1017" }
+    "poem": {
+      "title": "If\u2014",
+      "url": "https://www.poetryfoundation.org/search?query=If%E2%80%94"
+    },
+    "story": {
+      "title": "The Yellow Wallpaper",
+      "url": "https://www.google.com/search?q=The+Yellow+Wallpaper+short+story"
+    },
+    "essay": {
+      "title": "Nature",
+      "url": "https://www.google.com/search?q=Nature+essay"
+    }
   },
   {
     "day": 5,
-    "poem": { "title": "Annabel Lee", "url": "https://www.poetryfoundation.org/poems/44885" },
-    "story": { "title": "The Tell-Tale Heart", "url": "https://www.gutenberg.org/ebooks/2148" },
-    "essay": { "title": "On Liberty", "url": "https://www.gutenberg.org/ebooks/34901" }
+    "poem": {
+      "title": "Do Not Go Gentle into That Good Night",
+      "url": "https://www.poetryfoundation.org/search?query=Do+Not+Go+Gentle+into+That+Good+Night"
+    },
+    "story": {
+      "title": "An Occurrence at Owl Creek Bridge",
+      "url": "https://www.google.com/search?q=An+Occurrence+at+Owl+Creek+Bridge+short+story"
+    },
+    "essay": {
+      "title": "A Modest Proposal",
+      "url": "https://www.google.com/search?q=A+Modest+Proposal+essay"
+    }
   },
   {
     "day": 6,
-    "poem": { "title": "Do Not Go Gentle into That Good Night", "url": "https://www.poetryfoundation.org/poems/46480" },
-    "story": { "title": "A Sound of Thunder", "url": "https://www.baen.com/Chapters/9781625794317/9781625794317___2.htm" },
-    "essay": { "title": "Shooting an Elephant", "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/shooting-an-elephant/" }
+    "poem": {
+      "title": "Annabel Lee",
+      "url": "https://www.poetryfoundation.org/search?query=Annabel+Lee"
+    },
+    "story": {
+      "title": "The Tell-Tale Heart",
+      "url": "https://www.google.com/search?q=The+Tell-Tale+Heart+short+story"
+    },
+    "essay": {
+      "title": "Civil Disobedience",
+      "url": "https://www.google.com/search?q=Civil+Disobedience+essay"
+    }
   },
   {
     "day": 7,
-    "poem": { "title": "Still I Rise", "url": "https://www.poetryfoundation.org/poems/48989" },
-    "story": { "title": "Harrison Bergeron", "url": "https://www.gutenberg.org/ebooks/7273" },
-    "essay": { "title": "Civil Disobedience", "url": "https://www.gutenberg.org/ebooks/71" }
+    "poem": {
+      "title": "Because I could not stop for Death",
+      "url": "https://www.poetryfoundation.org/search?query=Because+I+could+not+stop+for+Death"
+    },
+    "story": {
+      "title": "The Lottery Ticket",
+      "url": "https://www.google.com/search?q=The+Lottery+Ticket+short+story"
+    },
+    "essay": {
+      "title": "On Self-Respect",
+      "url": "https://www.google.com/search?q=On+Self-Respect+essay"
+    }
   },
   {
     "day": 8,
-    "poem": { "title": "Hope is the Thing with Feathers", "url": "https://www.poetryfoundation.org/poems/42889" },
-    "story": { "title": "The Necklace", "url": "https://www.gutenberg.org/ebooks/3090" },
-    "essay": { "title": "The Myth of Sisyphus", "url": "https://www.blackwellpublishing.com/content/BPL_Images/Content_store/Sample_chapter/0631186409/001.pdf" }
+    "poem": {
+      "title": "A Dream Within a Dream",
+      "url": "https://www.poetryfoundation.org/search?query=A+Dream+Within+a+Dream"
+    },
+    "story": {
+      "title": "Araby",
+      "url": "https://www.google.com/search?q=Araby+short+story"
+    },
+    "essay": {
+      "title": "The Soul of Man under Socialism",
+      "url": "https://www.google.com/search?q=The+Soul+of+Man+under+Socialism+essay"
+    }
   },
   {
     "day": 9,
-    "poem": { "title": "Howl", "url": "https://www.poetryfoundation.org/poems/49303" },
-    "story": { "title": "The Cask of Amontillado", "url": "https://www.gutenberg.org/ebooks/1063" },
-    "essay": { "title": "Why I Write", "url": "https://orwell.ru/library/essays/wiw/english/e_wiw" }
+    "poem": {
+      "title": "The Love Song of J. Alfred Prufrock",
+      "url": "https://www.poetryfoundation.org/search?query=The+Love+Song+of+J.+Alfred+Prufrock"
+    },
+    "story": {
+      "title": "A Good Man Is Hard to Find",
+      "url": "https://www.google.com/search?q=A+Good+Man+Is+Hard+to+Find+short+story"
+    },
+    "essay": {
+      "title": "The Myth of Sisyphus",
+      "url": "https://www.google.com/search?q=The+Myth+of+Sisyphus+essay"
+    }
   },
   {
     "day": 10,
-    "poem": { "title": "The Love Song of J. Alfred Prufrock", "url": "https://www.poetryfoundation.org/poems/44212" },
-    "story": { "title": "An Occurrence at Owl Creek Bridge", "url": "https://www.gutenberg.org/ebooks/375" },
-    "essay": { "title": "Notes of a Native Son", "url": "https://rauterberg.employee.id.tue.nl/lecturenotes/critical-theory/baldwin_notes-of-a-native-son.pdf" }
+    "poem": {
+      "title": "Sonnet 18",
+      "url": "https://www.poetryfoundation.org/search?query=Sonnet+18"
+    },
+    "story": {
+      "title": "The Open Boat",
+      "url": "https://www.google.com/search?q=The+Open+Boat+short+story"
+    },
+    "essay": {
+      "title": "The Death of the Moth",
+      "url": "https://www.google.com/search?q=The+Death+of+the+Moth+essay"
+    }
   },
   {
     "day": 11,
-    "poem": { "title": "The Raven", "url": "https://www.poetryfoundation.org/poems/48860" },
-    "story": { "title": "Bartleby, the Scrivener", "url": "https://www.gutenberg.org/ebooks/11231" },
-    "essay": { "title": "The Death of the Moth", "url": "https://www.phillipsedison.com/wp-content/uploads/2020/05/The-Death-of-the-Moth-by-Virginia-Woolf.pdf" }
+    "poem": {
+      "title": "Stopping by Woods on a Snowy Evening",
+      "url": "https://www.poetryfoundation.org/search?query=Stopping+by+Woods+on+a+Snowy+Evening"
+    },
+    "story": {
+      "title": "The Rocking-Horse Winner",
+      "url": "https://www.google.com/search?q=The+Rocking-Horse+Winner+short+story"
+    },
+    "essay": {
+      "title": "The Crisis",
+      "url": "https://www.google.com/search?q=The+Crisis+essay"
+    }
   },
   {
     "day": 12,
-    "poem": { "title": "Phenomenal Woman", "url": "https://www.poetryfoundation.org/poems/48985" },
-    "story": { "title": "A White Heron", "url": "https://www.gutenberg.org/ebooks/29511" },
-    "essay": { "title": "The Crack-Up", "url": "https://www.esquire.com/news-politics/a4310/the-crack-up/" }
+    "poem": {
+      "title": "I, Too",
+      "url": "https://www.poetryfoundation.org/search?query=I%2C+Too"
+    },
+    "story": {
+      "title": "Bartleby, the Scrivener",
+      "url": "https://www.google.com/search?q=Bartleby%2C+the+Scrivener+short+story"
+    },
+    "essay": {
+      "title": "The Allegory of the Cave",
+      "url": "https://www.google.com/search?q=The+Allegory+of+the+Cave+essay"
+    }
   },
   {
     "day": 13,
-    "poem": { "title": "Because I Could Not Stop for Death", "url": "https://www.poetryfoundation.org/poems/47652" },
-    "story": { "title": "To Build a Fire", "url": "https://www.gutenberg.org/ebooks/23428" },
-    "essay": { "title": "Meditations", "url": "https://classics.mit.edu/Antoninus/meditations.html" }
+    "poem": {
+      "title": "Harlem",
+      "url": "https://www.poetryfoundation.org/search?query=Harlem"
+    },
+    "story": {
+      "title": "To Build a Fire",
+      "url": "https://www.google.com/search?q=To+Build+a+Fire+short+story"
+    },
+    "essay": {
+      "title": "Consider the Lobster",
+      "url": "https://www.google.com/search?q=Consider+the+Lobster+essay"
+    }
   },
   {
     "day": 14,
-    "poem": { "title": "Let America Be America Again", "url": "https://www.poetryfoundation.org/poems/147907" },
-    "story": { "title": "Araby", "url": "https://www.gutenberg.org/ebooks/2814" },
-    "essay": { "title": "The Singer Solution to World Poverty", "url": "https://www.nytimes.com/library/magazine/home/19990905mag-poverty-singer.html" }
+    "poem": {
+      "title": "The Tyger",
+      "url": "https://www.poetryfoundation.org/search?query=The+Tyger"
+    },
+    "story": {
+      "title": "The Most Dangerous Game",
+      "url": "https://www.google.com/search?q=The+Most+Dangerous+Game+short+story"
+    },
+    "essay": {
+      "title": "Why I Write",
+      "url": "https://www.google.com/search?q=Why+I+Write+essay"
+    }
+  },
+  {
+    "day": 15,
+    "poem": {
+      "title": "Ulysses",
+      "url": "https://www.poetryfoundation.org/search?query=Ulysses"
+    },
+    "story": {
+      "title": "The Necklace",
+      "url": "https://www.google.com/search?q=The+Necklace+short+story"
+    },
+    "essay": {
+      "title": "The Ethics of Belief",
+      "url": "https://www.google.com/search?q=The+Ethics+of+Belief+essay"
+    }
+  },
+  {
+    "day": 16,
+    "poem": {
+      "title": "Hope is the Thing with Feathers",
+      "url": "https://www.poetryfoundation.org/search?query=Hope+is+the+Thing+with+Feathers"
+    },
+    "story": {
+      "title": "The Cask of Amontillado",
+      "url": "https://www.google.com/search?q=The+Cask+of+Amontillado+short+story"
+    },
+    "essay": {
+      "title": "The Future of Humanity",
+      "url": "https://www.google.com/search?q=The+Future+of+Humanity+essay"
+    }
+  },
+  {
+    "day": 17,
+    "poem": {
+      "title": "The Second Coming",
+      "url": "https://www.poetryfoundation.org/search?query=The+Second+Coming"
+    },
+    "story": {
+      "title": "Desiree\u2019s Baby",
+      "url": "https://www.google.com/search?q=Desiree%E2%80%99s+Baby+short+story"
+    },
+    "essay": {
+      "title": "Of Studies",
+      "url": "https://www.google.com/search?q=Of+Studies+essay"
+    }
+  },
+  {
+    "day": 18,
+    "poem": {
+      "title": "Dover Beach",
+      "url": "https://www.poetryfoundation.org/search?query=Dover+Beach"
+    },
+    "story": {
+      "title": "The Lady with the Dog",
+      "url": "https://www.google.com/search?q=The+Lady+with+the+Dog+short+story"
+    },
+    "essay": {
+      "title": "Walking",
+      "url": "https://www.google.com/search?q=Walking+essay"
+    }
+  },
+  {
+    "day": 19,
+    "poem": {
+      "title": "A Valediction: Forbidding Mourning",
+      "url": "https://www.poetryfoundation.org/search?query=A+Valediction%3A+Forbidding+Mourning"
+    },
+    "story": {
+      "title": "The Secret Life of Walter Mitty",
+      "url": "https://www.google.com/search?q=The+Secret+Life+of+Walter+Mitty+short+story"
+    },
+    "essay": {
+      "title": "The Story of Philosophy",
+      "url": "https://www.google.com/search?q=The+Story+of+Philosophy+essay"
+    }
+  },
+  {
+    "day": 20,
+    "poem": {
+      "title": "How Do I Love Thee?",
+      "url": "https://www.poetryfoundation.org/search?query=How+Do+I+Love+Thee%3F"
+    },
+    "story": {
+      "title": "Rikki-Tikki-Tavi",
+      "url": "https://www.google.com/search?q=Rikki-Tikki-Tavi+short+story"
+    },
+    "essay": {
+      "title": "Meditations",
+      "url": "https://www.google.com/search?q=Meditations+essay"
+    }
+  },
+  {
+    "day": 21,
+    "poem": {
+      "title": "Kubla Khan",
+      "url": "https://www.poetryfoundation.org/search?query=Kubla+Khan"
+    },
+    "story": {
+      "title": "The Sniper",
+      "url": "https://www.google.com/search?q=The+Sniper+short+story"
+    },
+    "essay": {
+      "title": "The Origin of Species (excerpt)",
+      "url": "https://www.google.com/search?q=The+Origin+of+Species+%28excerpt%29+essay"
+    }
+  },
+  {
+    "day": 22,
+    "poem": {
+      "title": "My Last Duchess",
+      "url": "https://www.poetryfoundation.org/search?query=My+Last+Duchess"
+    },
+    "story": {
+      "title": "Young Goodman Brown",
+      "url": "https://www.google.com/search?q=Young+Goodman+Brown+short+story"
+    },
+    "essay": {
+      "title": "The Will to Believe",
+      "url": "https://www.google.com/search?q=The+Will+to+Believe+essay"
+    }
+  },
+  {
+    "day": 23,
+    "poem": {
+      "title": "Dulce et Decorum Est",
+      "url": "https://www.poetryfoundation.org/search?query=Dulce+et+Decorum+Est"
+    },
+    "story": {
+      "title": "The Machine Stops",
+      "url": "https://www.google.com/search?q=The+Machine+Stops+short+story"
+    },
+    "essay": {
+      "title": "Letters from a Stoic",
+      "url": "https://www.google.com/search?q=Letters+from+a+Stoic+essay"
+    }
+  },
+  {
+    "day": 24,
+    "poem": {
+      "title": "She Walks in Beauty",
+      "url": "https://www.poetryfoundation.org/search?query=She+Walks+in+Beauty"
+    },
+    "story": {
+      "title": "Thank You, Ma'am",
+      "url": "https://www.google.com/search?q=Thank+You%2C+Ma%27am+short+story"
+    },
+    "essay": {
+      "title": "On Liberty",
+      "url": "https://www.google.com/search?q=On+Liberty+essay"
+    }
+  },
+  {
+    "day": 25,
+    "poem": {
+      "title": "Invictus",
+      "url": "https://www.poetryfoundation.org/search?query=Invictus"
+    },
+    "story": {
+      "title": "The Bet",
+      "url": "https://www.google.com/search?q=The+Bet+short+story"
+    },
+    "essay": {
+      "title": "Man\u2019s Search for Meaning (excerpt)",
+      "url": "https://www.google.com/search?q=Man%E2%80%99s+Search+for+Meaning+%28excerpt%29+essay"
+    }
+  },
+  {
+    "day": 26,
+    "poem": {
+      "title": "The Raven",
+      "url": "https://www.poetryfoundation.org/search?query=The+Raven"
+    },
+    "story": {
+      "title": "The Boarded Window",
+      "url": "https://www.google.com/search?q=The+Boarded+Window+short+story"
+    },
+    "essay": {
+      "title": "The Hero with a Thousand Faces (excerpt)",
+      "url": "https://www.google.com/search?q=The+Hero+with+a+Thousand+Faces+%28excerpt%29+essay"
+    }
+  },
+  {
+    "day": 27,
+    "poem": {
+      "title": "Annunciation",
+      "url": "https://www.poetryfoundation.org/search?query=Annunciation"
+    },
+    "story": {
+      "title": "The Child\u2019s Story",
+      "url": "https://www.google.com/search?q=The+Child%E2%80%99s+Story+short+story"
+    },
+    "essay": {
+      "title": "Letters to a Young Poet",
+      "url": "https://www.google.com/search?q=Letters+to+a+Young+Poet+essay"
+    }
+  },
+  {
+    "day": 28,
+    "poem": {
+      "title": "Mending Wall",
+      "url": "https://www.poetryfoundation.org/search?query=Mending+Wall"
+    },
+    "story": {
+      "title": "Winter Dreams",
+      "url": "https://www.google.com/search?q=Winter+Dreams+short+story"
+    },
+    "essay": {
+      "title": "The Age of Reason (excerpt)",
+      "url": "https://www.google.com/search?q=The+Age+of+Reason+%28excerpt%29+essay"
+    }
+  },
+  {
+    "day": 29,
+    "poem": {
+      "title": "One Art",
+      "url": "https://www.poetryfoundation.org/search?query=One+Art"
+    },
+    "story": {
+      "title": "Miss Brill",
+      "url": "https://www.google.com/search?q=Miss+Brill+short+story"
+    },
+    "essay": {
+      "title": "The Art of War (excerpt)",
+      "url": "https://www.google.com/search?q=The+Art+of+War+%28excerpt%29+essay"
+    }
+  },
+  {
+    "day": 30,
+    "poem": {
+      "title": "We Real Cool",
+      "url": "https://www.poetryfoundation.org/search?query=We+Real+Cool"
+    },
+    "story": {
+      "title": "Harrison Bergeron",
+      "url": "https://www.google.com/search?q=Harrison+Bergeron+short+story"
+    },
+    "essay": {
+      "title": "The Tragedy of the Commons",
+      "url": "https://www.google.com/search?q=The+Tragedy+of+the+Commons+essay"
+    }
   }
 ]
