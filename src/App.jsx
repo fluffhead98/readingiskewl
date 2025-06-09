@@ -81,16 +81,14 @@ const App = () => {
 
       <RatingsHistory ratings={ratings} setRatings={setRatings} />
 
-      {/* Spotify Embed - Bottom Right */}
+      {/* Docked Spotify Player */}
       <div style={{
-        position: 'fixed',
-        bottom: '1rem',
-        right: '1rem',
-        maxWidth: '90%',
-        zIndex: 1000
+        marginTop: '2rem',
+        display: 'flex',
+        justifyContent: 'center'
       }}>
         <iframe
-          style={{ width: '100%', height: '80px', borderRadius: '12px' }}
+          style={{ width: '100%', maxWidth: '400px', height: '80px', borderRadius: '12px' }}
           src="https://open.spotify.com/embed/playlist/6dEdaN9tg6S5x4v698ARfb"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
