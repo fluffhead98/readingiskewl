@@ -2,7 +2,8 @@
   {
     "day": 1,
     "poem": {
-      "title": "The Road Not Taken"
+      "title": "The Road Not Taken",
+      "url": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken"
     },
     "story": {
       "title": "The Gift of the Magi",
@@ -16,7 +17,8 @@
   {
     "day": 2,
     "poem": {
-      "title": "Ozymandias"
+      "title": "Ozymandias",
+      "url": "https://www.poetryfoundation.org/poems/46565/ozymandias"
     },
     "story": {
       "title": "The Lottery",
@@ -30,7 +32,8 @@
   {
     "day": 3,
     "poem": {
-      "title": "Still I Rise"
+      "title": "Still I Rise",
+      "url": "https://www.poetryfoundation.org/poems/48989/still-i-rise"
     },
     "story": {
       "title": "An Occurrence at Owl Creek Bridge",
@@ -44,7 +47,8 @@
   {
     "day": 4,
     "poem": {
-      "title": "Do Not Go Gentle into That Good Night"
+      "title": "Do Not Go Gentle into That Good Night",
+      "url": "https://www.poetryfoundation.org/poems/46400/do-not-go-gentle-into-that-good-night"
     },
     "story": {
       "title": "The Yellow Wallpaper",
@@ -58,7 +62,8 @@
   {
     "day": 5,
     "poem": {
-      "title": "If\u2014"
+      "title": "If\u2014",
+      "url": "https://www.poetryfoundation.org/poems/46473/if---"
     },
     "story": {
       "title": "To Build a Fire",
@@ -72,7 +77,8 @@
   {
     "day": 6,
     "poem": {
-      "title": "Annabel Lee"
+      "title": "Annabel Lee",
+      "url": "https://www.poetryfoundation.org/poems/44885/annabel-lee"
     },
     "story": {
       "title": "The Tell-Tale Heart",
@@ -86,7 +92,8 @@
   {
     "day": 7,
     "poem": {
-      "title": "Stopping by Woods on a Snowy Evening"
+      "title": "Stopping by Woods on a Snowy Evening",
+      "url": "https://www.poetryfoundation.org/poems/42891/stopping-by-woods-on-a-snowy-evening"
     },
     "story": {
       "title": "Araby",
@@ -100,7 +107,8 @@
   {
     "day": 8,
     "poem": {
-      "title": "Hope is the thing with feathers"
+      "title": "Hope is the thing with feathers",
+      "url": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314"
     },
     "story": {
       "title": "The Monkey\u2019s Paw",
@@ -114,7 +122,8 @@
   {
     "day": 9,
     "poem": {
-      "title": "The Raven"
+      "title": "The Raven",
+      "url": "https://www.poetryfoundation.org/poems/48860/the-raven"
     },
     "story": {
       "title": "The Most Dangerous Game",
@@ -128,7 +137,8 @@
   {
     "day": 10,
     "poem": {
-      "title": "Because I could not stop for Death"
+      "title": "Because I could not stop for Death",
+      "url": "https://www.poetryfoundation.org/poems/47652/because-i-could-not-stop-for-death-479"
     },
     "story": {
       "title": "The Open Boat",
@@ -142,7 +152,8 @@
   {
     "day": 11,
     "poem": {
-      "title": "Sonnet 18"
+      "title": "Sonnet 18",
+      "url": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day"
     },
     "story": {
       "title": "A Good Man is Hard to Find",
@@ -156,7 +167,8 @@
   {
     "day": 12,
     "poem": {
-      "title": "A Dream Within a Dream"
+      "title": "A Dream Within a Dream",
+      "url": "https://www.poetryfoundation.org/poems/45575/a-dream-within-a-dream"
     },
     "story": {
       "title": "Bartleby, the Scrivener",
@@ -170,7 +182,8 @@
   {
     "day": 13,
     "poem": {
-      "title": "How Do I Love Thee?"
+      "title": "How Do I Love Thee?",
+      "url": "https://www.poetryfoundation.org/poems/43742/how-do-i-love-thee-sonnet-43"
     },
     "story": {
       "title": "The Rocking-Horse Winner",
@@ -184,7 +197,8 @@
   {
     "day": 14,
     "poem": {
-      "title": "Invictus"
+      "title": "Invictus",
+      "url": "https://www.poetryfoundation.org/poems/51642/invictus"
     },
     "story": {
       "title": "The Necklace",
@@ -198,7 +212,8 @@
   {
     "day": 15,
     "poem": {
-      "title": "She Walks in Beauty"
+      "title": "She Walks in Beauty",
+      "url": "https://www.poetryfoundation.org/poems/43844/she-walks-in-beauty"
     },
     "story": {
       "title": "The Cask of Amontillado",
@@ -212,7 +227,8 @@
   {
     "day": 16,
     "poem": {
-      "title": "Kubla Khan"
+      "title": "Kubla Khan",
+      "url": "https://www.poetryfoundation.org/poems/43991/kubla-khan"
     },
     "story": {
       "title": "The Story of an Hour",
@@ -226,7 +242,8 @@
   {
     "day": 17,
     "poem": {
-      "title": "Dover Beach"
+      "title": "Dover Beach",
+      "url": "https://www.poetryfoundation.org/poems/43588/dover-beach"
     },
     "story": {
       "title": "A Hunger Artist",
@@ -240,7 +257,8 @@
   {
     "day": 18,
     "poem": {
-      "title": "A Psalm of Life"
+      "title": "A Psalm of Life",
+      "url": "https://www.poetryfoundation.org/poems/44644/a-psalm-of-life"
     },
     "story": {
       "title": "Rikki-Tikki-Tavi",
@@ -254,7 +272,8 @@
   {
     "day": 19,
     "poem": {
-      "title": "The Love Song of J. Alfred Prufrock"
+      "title": "The Love Song of J. Alfred Prufrock",
+      "url": "https://www.poetryfoundation.org/poems/44212/the-love-song-of-j-alfred-prufrock"
     },
     "story": {
       "title": "The Lady, or the Tiger?",
@@ -268,7 +287,8 @@
   {
     "day": 20,
     "poem": {
-      "title": "The Tyger"
+      "title": "The Tyger",
+      "url": "https://www.poetryfoundation.org/poems/43687/the-tyger"
     },
     "story": {
       "title": "Desiree\u2019s Baby",
@@ -282,7 +302,8 @@
   {
     "day": 21,
     "poem": {
-      "title": "To Autumn"
+      "title": "To Autumn",
+      "url": "https://www.poetryfoundation.org/poems/44484/to-autumn"
     },
     "story": {
       "title": "The Interlopers",
@@ -296,7 +317,8 @@
   {
     "day": 22,
     "poem": {
-      "title": "My Last Duchess"
+      "title": "My Last Duchess",
+      "url": "https://www.poetryfoundation.org/poems/43768/my-last-duchess"
     },
     "story": {
       "title": "The Secret Life of Walter Mitty",
@@ -310,7 +332,8 @@
   {
     "day": 23,
     "poem": {
-      "title": "The New Colossus"
+      "title": "The New Colossus",
+      "url": "https://www.poetryfoundation.org/poems/46550/the-new-colossus"
     },
     "story": {
       "title": "The Sniper",
@@ -324,7 +347,8 @@
   {
     "day": 24,
     "poem": {
-      "title": "The Second Coming"
+      "title": "The Second Coming",
+      "url": "https://www.poetryfoundation.org/poems/43290/the-second-coming"
     },
     "story": {
       "title": "Miss Brill",
@@ -338,7 +362,8 @@
   {
     "day": 25,
     "poem": {
-      "title": "Ode to a Nightingale"
+      "title": "Ode to a Nightingale",
+      "url": "https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale"
     },
     "story": {
       "title": "The Child\u2019s Story",
@@ -352,7 +377,8 @@
   {
     "day": 26,
     "poem": {
-      "title": "When I Have Fears"
+      "title": "When I Have Fears",
+      "url": "https://www.poetryfoundation.org/poems/44483/when-i-have-fears-that-i-may-cease-to-be"
     },
     "story": {
       "title": "Thank You, Ma\u2019am",
@@ -366,7 +392,8 @@
   {
     "day": 27,
     "poem": {
-      "title": "One Art"
+      "title": "One Art",
+      "url": "https://www.poetryfoundation.org/poems/47536/one-art"
     },
     "story": {
       "title": "The Happy Prince",
@@ -380,7 +407,8 @@
   {
     "day": 28,
     "poem": {
-      "title": "I Wandered Lonely as a Cloud"
+      "title": "I Wandered Lonely as a Cloud",
+      "url": "https://www.poetryfoundation.org/poems/45521/i-wandered-lonely-as-a-cloud"
     },
     "story": {
       "title": "The Cop and the Anthem",
@@ -394,7 +422,8 @@
   {
     "day": 29,
     "poem": {
-      "title": "Fern Hill"
+      "title": "Fern Hill",
+      "url": "https://www.poetryfoundation.org/poems/45479/fern-hill"
     },
     "story": {
       "title": "How Much Land Does a Man Need?",
@@ -408,7 +437,8 @@
   {
     "day": 30,
     "poem": {
-      "title": "In a Station of the Metro"
+      "title": "In a Station of the Metro",
+      "url": "https://www.poetryfoundation.org/poems/44980/in-a-station-of-the-metro"
     },
     "story": {
       "title": "The Bet",

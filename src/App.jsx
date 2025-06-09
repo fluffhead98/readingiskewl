@@ -38,7 +38,11 @@ const App = () => {
           <div key={type} style={{ marginBottom: '1.5rem' }}>
             <p style={{ margin: 0 }}>
               <strong>{type.charAt(0).toUpperCase() + type.slice(1)}:</strong>{' '}
-              <a href={current[type].url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={current[type].url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {current[type].title}
               </a>
             </p>
